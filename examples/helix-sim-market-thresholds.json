@@ -1,0 +1,17 @@
+{
+  "repo": "helix-sim-market-scope",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 4,
+    "ship": 195,
+    "watch": 128
+  },
+  "terms": [
+    "input pressure",
+    "state drift",
+    "review cost",
+    "decision risk"
+  ]
+}
