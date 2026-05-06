@@ -1,0 +1,73 @@
+{
+  "repo": "helix-sim-market-scope",
+  "language": "C#",
+  "category": "Simulations",
+  "goal": "Create a C# reference implementation for market workflows, centered on state machine modeling, transition tables, and invalid-transition tests.",
+  "review_model": {
+    "terms": [
+      "input pressure",
+      "state drift",
+      "review cost",
+      "decision risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input pressure",
+      "signal": 70,
+      "slack": 38,
+      "drag": 22,
+      "confidence": 82,
+      "score": 194,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state drift",
+      "signal": 82,
+      "slack": 38,
+      "drag": 32,
+      "confidence": 91,
+      "score": 197,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 66,
+      "slack": 23,
+      "drag": 19,
+      "confidence": 81,
+      "score": 179,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "decision risk",
+      "signal": 56,
+      "slack": 37,
+      "drag": 10,
+      "confidence": 66,
+      "score": 185,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input pressure",
+      "signal": 83,
+      "slack": 45,
+      "drag": 20,
+      "confidence": 50,
+      "score": 201,
+      "lane": "ship"
+    }
+  ]
+}
